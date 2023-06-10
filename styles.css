@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap');
+
+@media screen and (max-width: 767px) {
+    .whatsapp img {
+        max-width: 300px !important;
+    }
+
+    .whatsapp-close {
+        left: 80% !important;
+    }
+    
+    #espaco {
+        margin: 0 !important;
+        height: 650px !important;
+    }
+}
+
+body {
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: blue;
+}
+
+.whatsapp {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    position: fixed;
+    z-index: 9999;
+    display: none;
+}
+
+.whatsapp img {
+    max-width: 400px;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.whatsapp-close {
+    position: absolute;
+    top:14%;
+    left: 59%;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px 0 #00000044;
+}
+
+#title {
+    color: #FFF !important;
+    text-align: center;
+    font-family: 'Roboto';
+    text-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+    padding: 2rem 0; /* Atualizado para afetar apenas a parte superior e inferior */
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Ajuste este valor conforme necessário */
+    margin-top: 150px;
+}
+
+
+#next-page {
+    background-color: #20b442;
+    padding: 10px 40px;
+    color: #FFF;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 3px 0 0 #0d521d;
+    font-size: 20px;
+    margin: 30px 0 0 0;
+    cursor: pointer;
+}
+
+button:disabled, button[disabled] {
+    background-color: #a7a7a7 !important;
+    box-shadow: 0 3px 0 0 #4e4e4e !important;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #FFF;
+}
+
+.deposito {
+    background-color: #FF0000;
+    text-align: center;
+    color: #FFF;
+    margin: 0 0 20px 0;
+}
+
+.deposito a {
+    color: #FFF;
+}
+
+iframe {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.game-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px; /* Define a largura máxima do banner */
+    margin-bottom: 1rem;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.board div {
+    width: 50px;
+    height: 50px;
+}
+
+.board img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info {
+    margin-bottom: 1rem;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.status-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.status {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #00336a;
+    animation: fadeInOut 6s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    15%, 20% {
+        opacity: 1;
+    }
+}
+
+.generate-opportunity {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+.generate-opportunity:hover {
+    background-color: #218838;
+}
